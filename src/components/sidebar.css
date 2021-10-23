@@ -1,0 +1,19 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+
+  padding: 10px 15px;
+  height: calc(100vh - calc(10px * 2));
+
+  font-weight: 200;
+  background: #020202;
+}
+
+.sidebar .logo {
+  width: 72px;
+  margin-bottom: auto;
+}

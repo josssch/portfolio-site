@@ -1,0 +1,20 @@
+.basic-list {
+  list-style: none;
+  padding: 0 1em;
+}
+
+.basic-list .item::before {
+  content: '- ';
+}
+
+.flex-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 5px;
+}
+
+.link-icon {
+  margin-right: 5px;
+}
