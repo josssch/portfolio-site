@@ -43,6 +43,18 @@
   /* transform: skew(10deg); */
 }
 
+.info-tile:nth-of-type(3n - 2) .title::after {
+  animation-delay: .5s;
+}
+
+.info-tile:nth-of-type(3n - 1) .title::after {
+  animation-delay: 1s;
+}
+
+.info-tile:nth-of-type(3n) .title::after {
+  animation-delay: 1.5s;
+}
+
 .info-tile .content {
   margin: 5px 0;
   font-weight: 200;
@@ -95,7 +107,7 @@
 }
 
 .project-url {
-  margin: auto 0 0 0;
+  margin: 5px 10px 0 0;
 }
 
 .captioned-tile .caption {

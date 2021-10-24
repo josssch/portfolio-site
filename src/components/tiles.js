@@ -1,4 +1,5 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLink } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import { Link } from './items';
 import './tiles.css';
@@ -14,12 +15,23 @@ export default function InfoTile({ children, title }) {
   );
 }
 
-export function ProjectTile({ children, projName, projUrl }) {
+export function ProjectTile({ project }) {
+  let {
+    name,
+    description,
+    html_url,
+    homepage
+  } = project;
+
   return (
     <div className='project-tile'>
-      <h1 className='project-name'><i>{projName}</i></h1>
-      <p className='project-desc'>{children}</p>
-      <Link className='project-url' icon={faGithub} url={projUrl}>View here</Link>
+      <h1 className='project-name'><i>{name}</i></h1>
+      <p className='project-desc'>{description}</p>
+
+      <span>
+        <Link className='project-url' icon={faGithub} url={html_url}>View here</Link>
+        { homepage && <Link className='project-url' icon={faLink} url={homepage}>Homepage</Link> }
+      </span>
     </div>
   );
 }

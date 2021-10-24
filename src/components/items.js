@@ -4,7 +4,7 @@ import './items.css';
 
 export function Link({ children, url, className, icon }) {
   return (
-    <a className={className} href={url} target='_blank' rel='noreferrer'>
+    <a className={className} href={url} target='_blank' rel='noreferrer noopener'>
       {icon && <FontAwesomeIcon className='link-icon' icon={icon} />}
       {children}
     </a>

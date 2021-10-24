@@ -49,7 +49,7 @@ class App extends React.Component {
             <FlexList>
               {
                 this.state.projects.filter(project => !project.fork)
-                   .map(project => <ProjectTile projName={project.name} projUrl={project.html_url}>{project.description}</ProjectTile> )
+                   .map(project => <ProjectTile project={project} /> )
               }
             </FlexList>
           }
