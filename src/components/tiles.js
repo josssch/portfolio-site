@@ -28,7 +28,7 @@ export function ProjectTile({ project }) {
       <h1 className='project-name'><i>{name}</i></h1>
       <p className='project-desc'>{description}</p>
 
-      <span>
+      <span className='project-urls'>
         <Link className='project-url' icon={faGithub} url={html_url}>View here</Link>
         { homepage && <Link className='project-url' icon={faLink} url={homepage}>Homepage</Link> }
       </span>
