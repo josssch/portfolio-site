@@ -32,3 +32,12 @@ a:hover, a:visited:hover {
   width: 50%;
   padding: 20px 15px;
 }
+
+.secondary-content {
+  display: block;
+
+  position: sticky;
+  top: 0;
+
+  max-height: 100vh;
+}

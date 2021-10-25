@@ -4,6 +4,7 @@ import Sidebar from './components/sidebar';
 import { FlexList, Link, StringList } from './components/items';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Timeline from './components/timeline';
 
 const birthday = new Date('2004/6/30');
 
@@ -72,6 +73,15 @@ function MainPage(props) {
       <Sidebar />
       <div className='main-content'>
         {props.children}
+      </div>
+      <div className='secondary-content'>
+        <Timeline times={ {
+          2004: 'I was born... nothing special really happened this year', 
+          2015: 'I write my first program using Batch... it had terrible security', 
+          2016: 'I began experimenting with HTML & CSS, I learned but why blue and red?',
+          2017: 'I began freelance developing Minecraft Bukkit plugins in Java',
+          2019: 'I quit freelance developing Minecraft Bukkit plugins as it was no longer enjoyable',
+          2021: 'As of today I am writing this website and publishing it!' } } />
       </div>
     </div>
   );
