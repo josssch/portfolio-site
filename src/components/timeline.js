@@ -25,23 +25,24 @@ export default class Timeline extends React.Component {
     let duration = latest - this.years[0];
 
     // lambda function that calculates the percentage from the top based on the year
-    let distance = (year) => (latest - year) / duration * 100;
+    let distance = (year) => 100 - (latest - year) / duration * 100;
 
     return (
-      <div className='timeline'>
-        <div className='timeline__line'>
+      <div className='timeline-wrapper'>
+        <div className='timeline'>
           {
             this.years.map(year =>
               <p className={ `timeline__year ${year === this.state.selectedYear ? 'selected' : ''}` } 
-                 description={ this.times[year] } 
-                 style={ { top: `${ distance(year) }%` } }
-                 onClick={evt => this.chooseYear(evt)}>
-                   { year }
+                  description={ this.times[year] } 
+                  style={ { top: `${ distance(year) }%` } }
+                  onClick={evt => this.chooseYear(evt)}>
+                    { year }
               </p>)
           }
 
-          <p class='timeline__text' style={ { top: `${ distance(this.state.selectedYear) }%` } }>{ this.state.text }</p>
         </div>
+
+        <p class='timeline__text' style={ { top: `${ distance(this.state.selectedYear) }%` } }>{ this.state.text }</p>
       </div>
     );
   }
