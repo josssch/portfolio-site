@@ -5,6 +5,7 @@ A generic portfolio website that loads my work from GitHub and displays it in a 
 - [x] A bit about me
 - [x] Familiar programming languages
 - [x] Social media links
+  - [ ] Contact me options
 - [x] GitHub projects
   - [x] Homepage link
   - [ ] Dominated language, if not all
