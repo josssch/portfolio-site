@@ -71,19 +71,23 @@ function MainPage(props) {
   return (
     <div className='main'>
       <Sidebar />
-      <div className='main-content'>
-        {props.children}
-      </div>
-      <div className='secondary-content'>
-        <InfoTile title='Timeline'>
-          <Timeline times={ {
-            2004: 'I was born... nothing special really happened this year', 
-            2015: 'I write my first program using Batch... it had terrible security', 
-            2016: 'I began experimenting with HTML & CSS, I learned but why blue and red?',
-            2017: 'I began freelance developing Minecraft Bukkit plugins in Java',
-            2019: 'I quit freelance developing Minecraft Bukkit plugins as it was no longer enjoyable',
-            2021: 'As of today I am writing this website and publishing it!' } } />
-        </InfoTile>
+
+      <div className='content-wrapper'>
+        <div className='content content--main'>
+          {props.children}
+        </div>
+
+        <div className='content content--secondary'>
+          <InfoTile title='Timeline'>
+            <Timeline times={ {
+              2004: 'I was born... nothing special really happened this year', 
+              2015: 'I write my first program using Batch... it had terrible security', 
+              2016: 'I began experimenting with HTML & CSS, I learned but why blue and red?',
+              2017: 'I began freelance developing Minecraft Bukkit plugins in Java',
+              2019: 'I quit freelance developing Minecraft Bukkit plugins as it was no longer enjoyable',
+              2021: 'As of today I am writing this website and publishing it!' } } />
+          </InfoTile>
+        </div>
       </div>
     </div>
   );
