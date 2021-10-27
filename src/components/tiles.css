@@ -43,15 +43,15 @@
   /* transform: skew(10deg); */
 }
 
-.info-tile:nth-of-type(3n - 2) .title::after {
+.info-tile:nth-of-type(3n - 2) .info-tile__title::after {
   animation-delay: .5s;
 }
 
-.info-tile:nth-of-type(3n - 1) .title::after {
+.info-tile:nth-of-type(3n - 1) .info-tile__title::after {
   animation-delay: 1s;
 }
 
-.info-tile:nth-of-type(3n) .title::after {
+.info-tile:nth-of-type(3n) .info-tile__title::after {
   animation-delay: 1.5s;
 }
 
