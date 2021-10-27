@@ -9,6 +9,7 @@ A generic portfolio website that loads my work from GitHub and displays it in a 
 - [x] GitHub projects
   - [x] Homepage link
   - [x] Dominated language, if not all
+  - [ ] Show more and show less
 - [ ] Life timeline (in empty space to the right)
 
 ## ⚾ Running the React app
