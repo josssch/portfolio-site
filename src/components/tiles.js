@@ -20,12 +20,13 @@ export function ProjectTile({ project }) {
     name,
     description,
     html_url,
-    homepage
+    homepage,
+    language
   } = project;
 
   return (
     <div className='project-tile'>
-      <h1 className='project-tile__name'><i>{name}</i></h1>
+      <h1 className='project-tile__name'><i>{name}</i> {language && `(${language})`}</h1>
       <p className='project-tile__desc'>{description}</p>
 
       <span className='project-tile__urls'>

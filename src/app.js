@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://api.github.com/users/srcjosh/repos').then(r => r.json()).then(projects => this.setState({ projects }));
+    fetch('https://api.github.com/users/ayleafs/repos').then(r => r.json()).then(projects => this.setState({ projects }));
   }
 
   render() {
