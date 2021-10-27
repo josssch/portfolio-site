@@ -5,6 +5,7 @@ import { FlexList, Link, StringList } from './components/items';
 
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Timeline from './components/timeline';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const birthday = new Date('2004/6/30');
 
@@ -60,6 +61,7 @@ class App extends React.Component {
         <InfoTile title='Links'>
           <FlexList gap='1em'>
             <Link url='https://github.com/srcjosh' icon={faGithub}>GitHub</Link>
+            <Link url='mailto:me@srcjosh.me' icon={faEnvelope}>Contact me</Link>
           </FlexList>
         </InfoTile>
       </MainPage>
