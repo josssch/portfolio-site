@@ -24,7 +24,7 @@ export default class Timeline extends React.Component {
       <div className='timeline-wrapper'>
         <div className='timeline'>
           {
-            this.years.reverse().map(year =>
+            [...this.years].reverse().map(year =>
               <p className={ `timeline__year ${year === this.state.selectedYear ? 'selected' : ''}` } 
                   description={ this.times[year] } 
                   onClick={evt => this.chooseYear(evt)}>
@@ -34,7 +34,7 @@ export default class Timeline extends React.Component {
         </div>
 
         <div className='timeline__text-wrapper'>
-          <p className='timeline__text' style={ { top: `${ this.years.indexOf(this.state.selectedYear) / this.years.length * 100 }%` } }>{ this.state.text }</p>
+          <p className='timeline__text' style={ { top: `${ 100 - ((this.years.indexOf(this.state.selectedYear) + 1) / this.years.length * 100) }%` } }>{ this.state.text }</p>
         </div>
       </div>
     );
