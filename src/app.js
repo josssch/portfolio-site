@@ -61,7 +61,7 @@ class App extends React.Component {
         <InfoTile title='Links'>
           <FlexList gap='1em'>
             <Link url='https://github.com/srcjosh' icon={faGithub}>GitHub</Link>
-            <Link url='mailto:me@srcjosh.me' icon={faEnvelope}>Contact me</Link>
+            <Link url='mailto:me@srcjosh.com' icon={faEnvelope}>Contact me</Link>
           </FlexList>
         </InfoTile>
       </MainPage>
