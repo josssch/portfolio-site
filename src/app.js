@@ -7,6 +7,8 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Timeline from './components/timeline';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
+import Animation from './components/animation';
+
 const birthday = new Date('2004/6/30');
 
 class App extends React.Component {
@@ -37,9 +39,15 @@ class App extends React.Component {
             I started programming about {experience} years ago <i>today</i> and since then I've gained a large understanding of a lot of different programming languages (see below).
           </p>
 
-          <CaptionTile caption='languages I know, in no particular order'>
-            <StringList items={[ 'HTML & CSS', 'Typescript/Javascript', 'Python', 'Rust', 'MySQL', 'PHP', 'React', 'Java', 'C/C++', 'C#' ]} />
-          </CaptionTile>
+          <FlexList>
+
+            <CaptionTile caption='languages I know, in no particular order'>
+              <StringList items={[ 'HTML & CSS', 'Typescript/Javascript', 'Python', 'Rust', 'MySQL', 'PHP', 'React', 'Java', 'C/C++', 'C#' ]} />
+            </CaptionTile>
+
+            <Animation />
+
+          </FlexList>
 
           <p>
             Programming has been a full-time hobby for me ever since I started.
