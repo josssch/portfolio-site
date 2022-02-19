@@ -36,16 +36,17 @@ export default class Animation extends React.Component {
 
     this.camera = new THREE.PerspectiveCamera(50, this.width / this.height);
     this.camera.position.set(0, 50, 100); // back up
+    this.camera.lookAt(0, 5, 0);
 
-    this.orbit = new OrbitControls(this.camera, this.renderer.domElement);
-    this.orbit.target.set(0, 5, 10);
-    this.orbit.update();
+    // this.orbit = new OrbitControls(this.camera, this.renderer.domElement);
+    // this.orbit.target.set(0, 5, 0);
+    // this.orbit.update();
 
     // add the basic lighting
     this.scene.add(new THREE.AmbientLight(0xffffff, .75));
 
     let light = new THREE.PointLight(0xffffff, 1.5);
-    light.position.set(50, 25, 50);
+    light.position.set(0, 25, 50);
     this.scene.add(light);
   }
 
@@ -59,7 +60,7 @@ export default class Animation extends React.Component {
 
     this.windmill = await this.objLoader.loadAsync('/assets/python.obj');
 
-    this.windmill.scale.set(50, 50, 50);
+    this.windmill.scale.set(25, 25, 25);
 
     this.scene.add(this.windmill);
   }
@@ -67,7 +68,7 @@ export default class Animation extends React.Component {
   animateLoop() {
     requestAnimationFrame(() => this.animateLoop());
 
-    this.orbit.update();
+    // this.orbit.update();
 
     if (!this.windmill) {
       return;
