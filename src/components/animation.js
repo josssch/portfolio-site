@@ -6,9 +6,6 @@ import * as THREE from 'three';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-
 export default class Animation extends React.Component {
   componentDidMount() {
     // make sure WebGL is enabled
@@ -38,10 +35,6 @@ export default class Animation extends React.Component {
     this.camera.position.set(0, 50, 100); // back up
     this.camera.lookAt(0, 5, 0);
 
-    // this.orbit = new OrbitControls(this.camera, this.renderer.domElement);
-    // this.orbit.target.set(0, 5, 0);
-    // this.orbit.update();
-
     // add the basic lighting
     this.scene.add(new THREE.AmbientLight(0xffffff, .75));
 
@@ -67,8 +60,6 @@ export default class Animation extends React.Component {
 
   animateLoop() {
     requestAnimationFrame(() => this.animateLoop());
-
-    // this.orbit.update();
 
     if (!this.windmill) {
       return;
